@@ -86,8 +86,4 @@ public class MainActivity extends ActionBarActivity
 
         return summary;
     }
-
-
-
-
 }
