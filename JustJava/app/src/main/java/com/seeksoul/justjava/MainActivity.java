@@ -4,17 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity
 {
     int numberOfCoffees = 0;
-
-    CheckBox CheckCream = (CheckBox) findViewById(R.id.state_of_cream);
-    boolean hasCream = CheckCream.isChecked();
-
-    CheckBox CheckChoco = (CheckBox) findViewById(R.id.state_of_chocolate);
-    boolean hasChoco =  CheckChoco.isChecked();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -42,15 +37,15 @@ public class MainActivity extends ActionBarActivity
 
     private int calculatePrice(int quantity)
     {
-        if (hasCream == true && hasChoco == true)
+        if (CheckCream() == true && CheckChoco() == true)
         {
             return quantity * 18;
         }
-        else if (hasCream == false && hasChoco== true)
+        else if (CheckCream() == false && CheckChoco()== true)
         {
             return quantity * 8;
         }
-        else if (hasCream == true && hasChoco == false)
+        else if (CheckCream() == true && CheckChoco() == false)
         {
             return quantity * 10;
         }
@@ -80,10 +75,29 @@ public class MainActivity extends ActionBarActivity
 
     private String summaryOrder(int quantity)
     {
-        String summary = "Name: Captain Bear" + "\nQuantity: " + quantity;
+
+        String summary = "Name: " + InsertName() + "\nQuantity: " + quantity;
         summary += "\nPrice: " + calculatePrice(quantity) + "zł";
         summary += "\nThank You!";
 
         return summary;
+    }
+
+    private boolean CheckCream()
+    {
+        CheckBox cream = (CheckBox) findViewById(R.id.state_of_cream);
+        return cream.isChecked();
+    }
+
+    private boolean CheckChoco()
+    {
+        CheckBox choco = (CheckBox) findViewById(R.id.state_of_chocolate);
+        return choco.isChecked();
+    }
+
+    private String InsertName()
+    {
+        EditText Name = (EditText) findViewById(R.id.name_field);
+        return Name.getText().toString();
     }
 }
