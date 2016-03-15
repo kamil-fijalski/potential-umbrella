@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/photo_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frankfurt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0"
+            android:text="Port lotniczy Frankfurt"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center|right"
+            android:layout_weight="1"
+            android:text="Port lotniczy Frankfurt (także znany jako port lotniczy Ren-Men, ang.: Frankfurt Airport, niem. : Rhein-Main-Flughafen lub Flughafen Frankfurt am Main, IATA: FRA, ICAO: EDDF) – największy port lotniczy w Niemczech, usytuowany we Frankfurcie nad Menem, w dzielnicy Flughafen. Właścicielem i operatorem zarządzającym portem jest spółka Fraport. W Europie port lotniczy zajmuje trzecie miejsce pod względem liczby pasażerów (2008), drugie pod względem liczby operacji lotniczych (2005) i drugie pod względem liczby przeładowanych towarów (2005). Port zajmuje pierwsze miejsce na świecie pod względem obsługiwanych połączeń międzynarodowych."/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#9575cd"
+            android:text="POKAŻ NA MAPIE"
+            android:onClick="LocationFNM"/>
+
+    </LinearLayout>
+</ScrollView>
