@@ -19,7 +19,8 @@
         <activity android:name=".FrankfurtActivity" />
         <activity android:name=".LondonActivity" />
         <activity android:name=".DCActivity" />
-        <activity android:name=".ParisActivity"></activity>
+        <activity android:name=".ParisActivity" />
+        <activity android:name=".AirportActivity"></activity>
     </application>
 
 </manifest>

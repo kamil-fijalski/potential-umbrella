@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:orientation="vertical"
     android:paddingBottom="8dp"
     android:paddingLeft="8dp"
@@ -10,68 +13,111 @@
     android:paddingTop="8dp"
     tools:context="com.seeksoul.flughafens.MainActivity">
 
-    <ImageView
-        android:id="@+id/photo_image_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_plane" />
+    <android.support.v7.widget.CardView
 
-    <Button
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:background="#673ab7"
-        android:onClick="GoOkecie"
-        android:text="Warszawa-Okęcie" />
+        android:layout_height="200dp"
+        android:layout_gravity="top"
+        android:elevation="30dp"
+        card_view:cardCornerRadius="0dp">
 
-    <Button
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photo_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_plane" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:background="#673ab7"
-        android:onClick="GoFrankfurt"
-        android:text="Frankfurt nad Menem" />
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_margin="0dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:background="#673ab7"
-        android:onClick="GoLondon"
-        android:text="Londyn-Heathrow" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:background="#673ab7"
-        android:onClick="GoDC"
-        android:text="Waszyngton-Reagan-National" />
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#673ab7"
+                android:onClick="GoOkecie"
+                android:text="Warszawa-Okęcie"
+                android:textColor="#f3e5f5" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:background="#673ab7"
-        android:onClick="GoParis"
-        android:text="Paryż-Roissy" />
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#673ab7"
+                android:onClick="GoFrankfurt"
+                android:text="Frankfurt nad Menem"
+                android:textColor="#f3e5f5" />
 
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#673ab7"
+                android:onClick="GoLondon"
+                android:text="Londyn-Heathrow"
+                android:textColor="#f3e5f5" />
+
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#673ab7"
+                android:onClick="GoDC"
+                android:text="Waszyngton-Reagan-National"
+                android:textColor="#f3e5f5" />
+
+            <Button
+                android:id="@+id/b5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="#673ab7"
+                android:onClick="GoParis"
+                android:text="Paryż-Roissy"
+                android:textColor="#f3e5f5" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>
+
 
