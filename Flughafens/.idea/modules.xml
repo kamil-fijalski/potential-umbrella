@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Flughafens.iml" filepath="$PROJECT_DIR$/Flughafens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Flughafens-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Flughafens-app.iml" group="Flughafens/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/potential-umbrella-Flughafens.iml" filepath="$PROJECT_DIR$/.idea/modules/potential-umbrella-Flughafens.iml" group="Flughafens" />
     </modules>
   </component>
 </project>
